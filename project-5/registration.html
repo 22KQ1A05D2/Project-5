@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <script>
+            function validation()
+             {
+            if (isEmpty(document.getElementById('sname').value.trim())) {
+            alert('First name is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('rollno').value.trim())) {
+            alert('roll no `is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('email').value.trim())) {
+            alert('Email is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('birthdate').value.trim())) {
+            alert('Birthdate is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('datejoining').value.trim())) {
+            alert('Datejoining is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('year').value.trim())) {
+            alert('Year is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('mytest').value.trim())) {
+            alert('mytest is required!');
+            return false;
+            }
+
+            if (isEmpty(document.getElementById('pass').value.trim())) {
+            alert('create password is required!');
+            return false;
+            }
+            
+            
+            if (isEmpty(document.getElementById('passs').value.trim())) {
+            alert("confirm password is required");
+            return false;
+            }
+            
+             return true;
+            }
+            function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+            function validateEmail(email) {
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+            return isEmpty(email) || re.test(email);
+            }
+           
+        
+            </script>
+        <title>Registration</title>
+        <style>
+            body{background-color: rgba(0, 0, 0, 0.918); color: rgb(23, 187, 199);}
+        </style>
+        <body>
+            <body background="img6.jpg"></body>
+            <div>
+            <form align="left" target="blank" action="loginpage.html" onsubmit="return validation()">
+                <center><h1>Registration Form</h1></center>
+                <center>Name:<br><input type="text" id="sname" name="sname", placeholder="Name" autofocus></center>
+                <center>Roll no:<br><input type="text" id="rollno" name="rollno", placeholder="rol no"></center>
+               <center>email id:<br><input type="email" id="email" name="email", placeholder="email id"><br><br></center>
+                <center>Gender:<input type="radio" id="gender" name="gender" value="male">Male
+                <input type="radio" id="gender" name="gender" value="Female">Female<br><br></center>
+                <center>Date of birth:<input type="date" id="birthdate" name="birthdate"><br><br></center>
+                <center>Date of joining:<input type="date" id="datejoining" name="datejoining"><br><br></center>
+               
+<center>Year:<br><select id="year" name="year"><br>
+<option value="I">I</option>
+<option value="II">II</option>
+<option value="III">III</option>
+<option value="IV">IV</option>
+</select><br><br></center>
+<center>Course:
+<br><input type="checkbox" id="c" name="c">C
+<input type="checkbox" id="python" name="python">Python
+<input type="checkbox" id="java" name="java">Java<br><br></center>
+<center>Address:<textarea id="mytest" name="mytest" cols="20", placeholder="Address">
+</textarea><br><br></center>
+<center><br>Create password: <input type="password" id="pass" name="pass", placeholder="passwd"><br></center>
+<center><br>Confirm password: <input type="password" id="passs" name="passs", placeholder="passwd"><br><br></center>
+<center><input type="submit">
+<button type="reset">Reset</button></center>
+           </form>    
+            </div>
+        </body>
+    </head>
+</html>
